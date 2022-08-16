@@ -1,0 +1,125 @@
+<?
+  error_reporting(0);
+?>
+
+<?
+   session_start();
+?>
+
+<html>
+
+    <head>
+        <style>
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: rgb(53, 198, 34);
+            }
+            
+            li {
+              float: left;
+              border-right:1px solid #bbb;
+            }
+            
+            li:last-child {
+              border-right: none;
+            }
+            
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+            li a:hover:not(.active) {
+              background-color:rgb(0, 0, 0);
+            }
+            
+            .active {
+              background-color: #dfa017;
+            }
+            </style>
+            
+        </head>
+        
+        <link rel="stylesheet" href="index.css">
+
+        <?php
+        
+            $con=mysqli_connect("localhost","root","","project");
+            if(mysqli_connect_errno($con))
+            {
+                echo "Failed to connect to MySQL" . mysqli_connect_error();
+            }
+
+        ?>
+
+        <?
+        $unm= $_SESSION['val'];
+        ?>
+    
+
+    <body>
+
+        <div style="border-style: solid; border-width: thin; border-color: black; background-color:darkblue; height: 10px;"></div>
+        <div style="border-style: solid; border-width: thin; border-color: black; background-color:royalblue; height: 80px;">
+            <section>
+                <div class="box" style="border-style: solid; border-width: thin; border-color:white; border-width: 3px; height: 550px; width: 900px; " >
+                    <div class="navbox" style="border-style: solid; border-width: thin; border-color: black; background-color:royalblue; height: 60px; " >
+                        <font color="white"><h1 align="center" style="padding: 15px;" >Detection of Fraudulent Sellers in Online Marketplaces</h1></font>
+                    </div>
+                       <ul> 
+                          <li><a class="active" href="#home">Home</a></li>
+                          <li><a href="http://localhost/projectwork/all_products.php">All Products</a></li>
+                          <li><a href="http://localhost/projectwork/offers.php">Offers</a></li>
+                          <li><a href="http://localhost/projectwork/myproducts.php">My Products</a></li>
+                          <li><a href="http://localhost/projectwork/userlogin.php">Logout</a></li>
+                          <li style="float:right"><a href="#about">Welcome:<?echo $unm;?></a></li>
+                        </ul>
+                    <div style=" background-color:rgb(234, 234, 161); height: 380px; " >
+                        <table width="100%" height="100%" >
+                            <tr>
+                                <td width="75%" >
+                                    <div style=" padding: 25px;" >
+                                        <font color="red"><h3>Detection of Fraudulent Sellers:</h3></font>
+                                        <h4>We consider the problem of building online machine -learned models
+                                        for detecting auction<br>frauds in e-commerce web sites. Since the emergence
+                                        of the world Wide Web, online shop<br>ping and online auction have gained more and
+                                        more popularity. While people are enoying<br>the benifits from online trading,criminals
+                                        are also taking advantages to condct fradulent activities against honest parties to
+                                        obtain illegal profit. Hence proactive fraud-detection moderation systems are commonly
+                                        applied in practice to detect and prevent such illegal and fraud activities.
+                                        Machine-learned models, especially those that are learned online, are able to catch 
+                                        frauds more efficiently and quickly than human-tuned rule-based systems. In this paper,
+                                        we propose an online profit model framework which takes online feature selection,
+                                        coefficient bounds from human knowledge and multiple instance learning into account
+                                        simultaneously. By empirical experiments on a real world online auction fraud detection
+                                        data we show that this model can potentially detect more frauds and signifcantly reduce
+                                        customer complaints compared to several baseline models and the human-tuned
+                                        rule-based system.
+                                        </h4>
+                                    </div>
+                                </td>
+                                <sectionlg>
+                                <td width="20%" style="background-color: rgb(244, 235, 159); " >
+                                    <font color="red"><h2 align="center" >Registration</h2></font>
+                                    <font color="blue"><h3 align="center"><a href="http://localhost/projectwork/sellersignup.php">Seller</a></h3>
+                                    <h3 align="center" ><a href="http://localhost/projectwork/usersignup.php">User</a></h3></font>
+                                    <font color="red"><h2 align="center" >Login</h2></font>
+                                    <font color="blue"><h3 align="center" ><a href="http://localhost/projectwork/sellerlogin.php">Seller</a></h3>
+                                    <h3 align="center" ><a href="http://localhost/projectwork/userlogin.php">User</a></h3>
+                                    <h3 align="center" ><a href="http://localhost/projectwork/adminlogin.php">Admin</a></h3></font>
+                                </td></sectionlg>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+
+</html>

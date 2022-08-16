@@ -1,0 +1,46 @@
+section
+{
+    padding: 40 220px;
+    background: url();
+    height: 80vh;
+    display: flex;
+}
+.box
+{
+    position: relative;
+    max-width: 100%;
+    padding: 0;
+    background: rgba(255, 255, 255, .2);
+}
+.navbox
+{
+    position: relative;
+    max-width: 100%;
+    padding: 20 30 40 60px;
+    background: rgba(255, 255, 255, .2);
+}
+.lgbox
+{
+    position: relative;
+    max-width: 500px;
+    padding: 0 0 220 20px;
+}
+.seller
+{
+    position: relative;
+    max-width: 800px;
+    padding: 40 60 50 40px;
+}
+
+.admin
+{
+    position: relative;
+    max-width: 800px;
+    padding: 0 20 20 15px;
+}
+.mytable
+{
+    vertical-align: top;
+    padding-top: 20px;
+    padding-left: 20px;
+}
